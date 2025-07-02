@@ -1,3 +1,14 @@
+Ótimo! Vamos implementar a Opção A: o Dropdown Personalizado para a seleção de perfil.
+
+Este novo design exigirá atualizações no seu index.html, style.css e a adição de um novo arquivo script.js para a funcionalidade.
+
+Passo 1: Atualizar o index.html
+Este HTML substitui os botões por uma estrutura para o dropdown personalizado.
+
+Copie TODO o código abaixo e cole-o no seu arquivo index.html (substituindo todo o conteúdo atual do arquivo index.html na sua pasta pagina-inicial).
+
+HTML
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inksa Delivery - Escolha seu perfil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -13,16 +25,19 @@
         </div>
         <h1>Bem-vindo ao Inksa Delivery!</h1>
         <p>Por favor, selecione seu perfil para continuar:</p>
-        <div class="options-grid">
-            <a href="https://cliente.inksadelivery.com.br" class="option-button">Sou Cliente</a>
-            <a href="https://restaurante.inksadelivery.com.br" class="option-button">Sou Restaurante</a>
-            <a href="https://entregador.inksadelivery.com.br" class="option-button">Sou Entregador</a>
+        
+        <div class="custom-select-wrapper">
+            <div class="select-selected">
+                Selecione seu perfil <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="select-items select-hide">
+                <div data-value="cliente" data-url="https://cliente.inksadelivery.com.br">Sou Cliente</div>
+                <div data-value="restaurante" data-url="https://restaurante.inksadelivery.com.br">Sou Restaurante</div>
+                <div data-value="entregador" data-url="https://entregador.inksadelivery.com.br">Sou Entregador</div>
+            </div>
         </div>
     </div>
 
-    <script>
-        // Não é estritamente necessário JavaScript para este redirecionamento simples.
-        // O navegador lida com o redirecionamento porque são tags <a>.
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
